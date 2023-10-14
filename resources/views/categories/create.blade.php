@@ -4,33 +4,30 @@
   
 @section('contents')
     <hr />
-    <form action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('categories.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
-        <div class="row mb-3">
+        <div class="row mb-3 col-sm-6">
             <div class="col">
-                <input type="text" name="name" class="form-control" placeholder="Nama Produk">
-            </div>
-            <div class="col">
-                <input type="text" name="price" class="form-control" placeholder="Harga">
-            </div>
-        </div>
-        <div class="row mb-3">
-            <div class="col">
-                <input type="text" name="category_id" class="form-control" placeholder="Kategori">
-            </div>
-            <div class="col">
-                <input type="text" name="stock" class="form-control" placeholder="Stok">
+                <label class="form-label" for="name">Nama Kategori</label>
+                <input type="text" name="name" class="form-control" placeholder="Nama Kategori">
+                @error('name')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </div>
         </div>
-        <div class="row mb-3">
+        <div class="row mb-3 col-sm-6">
             <div class="col">
-                <textarea class="form-control" name="description" placeholder="Deskripsi"></textarea>
+                <label class="form-label" for="description">Deskripsi Kategori</label>
+                <textarea class="form-control" name="description" placeholder="Deskripsi" rows="5"></textarea>
+                @error('description')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </div>
         </div>
  
-        <div class="row">
+        <div class="row col-sm-6">
             <div class="d-grid">
-                <button type="submit" class="btn btn-primary">Tambah</button>
+                <button type="submit" class="btn btn-success">Tambah</button>
             </div>
         </div>
     </form>

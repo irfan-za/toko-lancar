@@ -13,6 +13,7 @@
       </a>
       <!-- Dropdown - Messages -->
       <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
+      @if (!preg_match('/\./', Route::current()->getName()))
         <form  action="{{ route(Route::current()->getName()) }}" method="GET" class="form-inline mr-auto w-100 navbar-search">
           <div class="input-group">
             <input type="text" name="search" class="form-control bg-light border-0 small" placeholder="Cari..." value="{{ request('search') }}">
@@ -23,6 +24,7 @@
             </div>
           </div>
         </form>
+      @endif
       </div>
     </li>
   

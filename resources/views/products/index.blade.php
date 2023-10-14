@@ -46,7 +46,7 @@
                             <div class="btn-group" role="group" aria-label="Basic example">
                                 <a href="{{ route('products.show', $product->id) }}" type="button" class="btn btn-secondary">Detail</a>
                                 <a href="{{ route('products.edit', $product->id)}}" type="button" class="btn btn-warning">Edit</a>
-                                <form action="{{ route('products.destroy', $product->id) }}" method="POST" type="button" class="btn btn-danger p-0" onsubmit="return confirm('Delete?')">
+                                <form action="{{ route('products.destroy', $product->id) }}" method="POST" type="button" class="btn btn-danger p-0" onsubmit="return confirm('Yakin ingin menghapus product?')">
                                     @csrf
                                     @method('DELETE')
                                     <button class="btn btn-danger m-0">Hapus</button>
@@ -57,7 +57,7 @@
                 @endforeach
             @else
                 <tr>
-                    <td class="text-center" colspan="5">Product not found</td>
+                    <td class="text-center" colspan="5">Produk tidak ditemukan</td>
                 </tr>
             @endif
         </tbody>

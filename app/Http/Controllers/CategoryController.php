@@ -10,11 +10,15 @@ class CategoryController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $category = Category::orderBy('created_at', 'DESC')->get();
-  
-        return view('categories.index', compact('category'));
+        $queryCategories = Category::orderBy('created_at', 'DESC');
+        $search = $request->input('search');
+        if (!empty($search)) {
+            $queryCategories->where('name', 'like', '%' . $search . '%');
+        }
+        $categories = $queryCategories->get();
+        return view('categories.index', compact('categories'));
     }
   
     /**
@@ -22,7 +26,8 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('categories.create');
+        $categories = Category::all(); 
+        return view('categories.create', compact('categories'));
     }
   
     /**
@@ -31,8 +36,7 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         Category::create($request->all());
- 
-        return redirect()->route('categories')->with('success', 'Berhasil Menambah Kategori');
+        return redirect()->route('categories')->with('success', 'Berhasil menambah kategori');
     }
   
     /**
@@ -41,7 +45,6 @@ class CategoryController extends Controller
     public function show(string $id)
     {
         $category = Category::findOrFail($id);
-  
         return view('categories.show', compact('category'));
     }
   
@@ -51,7 +54,6 @@ class CategoryController extends Controller
     public function edit(string $id)
     {
         $category = Category::findOrFail($id);
-  
         return view('categories.edit', compact('category'));
     }
   
