@@ -4,17 +4,22 @@ namespace App\Http\Controllers;
   
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\Category;
  
 class ProductController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $product = Product::orderBy('created_at', 'DESC')->get();
-  
-        return view('products.index', compact('product'));
+        $queryProducts = Product::orderBy('created_at', 'DESC')->with('category');
+        $search = $request->input('search');
+        if (!empty($search)) {
+            $queryProducts->where('name', 'like', '%' . $search . '%');
+        }
+        $products = $queryProducts->get();
+        return view('products.index', compact('products'));
     }
   
     /**
@@ -22,7 +27,8 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('products.create');
+        $categories = Category::all(); 
+        return view('products.create', compact('categories'));
     }
   
     /**
@@ -31,7 +37,6 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         Product::create($request->all());
- 
         return redirect()->route('products')->with('success', 'Berhasil menambah produk');
     }
   
@@ -41,8 +46,8 @@ class ProductController extends Controller
     public function show(string $id)
     {
         $product = Product::findOrFail($id);
-  
-        return view('products.show', compact('product'));
+        $category = Category::find($product->category_id);
+        return view('products.show', compact('product', 'category'));
     }
   
     /**
@@ -51,8 +56,8 @@ class ProductController extends Controller
     public function edit(string $id)
     {
         $product = Product::findOrFail($id);
-  
-        return view('products.edit', compact('product'));
+        $categories = Category::all(); 
+        return view('products.edit', compact('product', 'categories'));
     }
   
     /**

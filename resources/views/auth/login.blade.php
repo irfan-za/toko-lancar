@@ -14,7 +14,7 @@
   <!-- Custom styles for this template-->
   <link href="{{ asset('admin_assets/css/sb-admin-2.min.css') }}" rel="stylesheet">
 </head>
-<body class="bg-gradient-primary">
+<body class="bg-gradient-success">
   <div class="container">
     <!-- Outer Row -->
     <div class="row justify-content-center">
@@ -53,7 +53,7 @@
                           Saya</label>
                       </div>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block btn-user">Masuk</button>
+                    <button type="submit" class="btn btn-success btn-block btn-user">Masuk</button>
                   </form>
                   <hr>
                   <div class="text-center">

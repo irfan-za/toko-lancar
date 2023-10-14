@@ -9,7 +9,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #3498db;
+            background-color: #11A27B;
             color: #fff;
         }
         .container {
@@ -31,7 +31,7 @@
             text-decoration: none;
             border:2px solid #fff;
             color: #fff;
-            background-color: #3498db;
+            background-color: #11A27B;
             padding: 10px 20px;
             border-radius: 5px;
             font-weight: bold;
@@ -39,7 +39,7 @@
         }
         a:hover {
             background-color: #fff;
-            color: #3498db;
+            color: #11A27B;
         }
     </style>
 </head>

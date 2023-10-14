@@ -14,7 +14,7 @@
   <!-- Custom styles for this template-->
   <link href="{{ asset('admin_assets/css/sb-admin-2.min.css') }}" rel="stylesheet">
 </head>
-<body class="bg-gradient-primary">
+<body class="bg-gradient-success">
   <div class="container">
     <div class="card o-hidden border-0 shadow-lg my-5">
       <div class="card-body p-0">
@@ -54,11 +54,11 @@
                     @enderror
                   </div>
                 </div>
-                <button type="submit" class="btn btn-primary btn-user btn-block">Daftar</button>
+                <button type="submit" class="btn btn-success btn-user btn-block">Daftar</button>
               </form>
               <hr>
               <div class="text-center">
-                <a class="small" href="{{ route('login') }}">Already have an account? Login!</a>
+                <a class="small" href="{{ route('login') }}">Sudah memiliki akun? Masuk!</a>
               </div>
             </div>
           </div>
