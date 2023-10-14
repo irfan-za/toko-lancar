@@ -1,6 +1,6 @@
 @extends('layouts.app')
   
-@section('title', 'Dashboard - Laravel Admin Panel With Login and Registration')
+@section('title', 'Dashboard - Toko Lancar')
   
 @section('contents')
   <div class="row">

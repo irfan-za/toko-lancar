@@ -1,11 +1,11 @@
-<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+<ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion" id="accordionSidebar">
   
   <!-- Sidebar - Brand -->
   <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
     <div class="sidebar-brand-icon rotate-n-15">
-      <i class="fas fa-laugh-wink"></i>
+      <i class="fas fa-store"></i>
     </div>
-    <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+    <div class="sidebar-brand-text mx-3">Toko Lancar</div>
   </a>
   
   <!-- Divider -->
@@ -14,25 +14,25 @@
   <!-- Nav Item - Dashboard -->
   <li class="nav-item">
     <a class="nav-link" href="{{ route('dashboard') }}">
-      <i class="fas fa-fw fa-tachometer-alt"></i>
+      <i class="fas fa-fw fa-chart-line"></i>
       <span>Dashboard</span></a>
   </li>
   
   <li class="nav-item">
     <a class="nav-link" href="{{ route('products') }}">
-      <i class="fas fa-fw fa-tachometer-alt"></i>
-      <span>Product</span></a>
+      <i class="fas fa-fw fa-box"></i>
+      <span>Produk</span></a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="{{ route('categories') }}">
-      <i class="fas fa-fw fa-tachometer-alt"></i>
+      <i class="fas fa-fw fa-layer-group"></i>
       <span>Kategori</span></a>
   </li>
   
   <li class="nav-item">
     <a class="nav-link" href="/profile">
-      <i class="fas fa-fw fa-tachometer-alt"></i>
-      <span>Profile</span></a>
+      <i class="fas fa-fw fa-user-alt"></i>
+      <span>Profil</span></a>
   </li>
   
   <!-- Divider -->
