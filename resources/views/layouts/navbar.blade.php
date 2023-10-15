@@ -7,13 +7,13 @@
   <!-- Topbar Navbar -->
   <ul class="navbar-nav ml-auto">
     <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+    @if (!preg_match('/\./', Route::current()->getName()) && Route::current()->getName() !== 'dashboard')
     <li class="nav-item dropdown no-arrow d-sm-none">
       <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <i class="fas fa-search fa-fw"></i>
       </a>
       <!-- Dropdown - Messages -->
       <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
-      @if (!preg_match('/\./', Route::current()->getName()))
         <form  action="{{ route(Route::current()->getName()) }}" method="GET" class="form-inline mr-auto w-100 navbar-search">
           <div class="input-group">
             <input type="text" name="search" class="form-control bg-light border-0 small" placeholder="Cari..." value="{{ request('search') }}">
@@ -24,9 +24,9 @@
             </div>
           </div>
         </form>
-      @endif
       </div>
     </li>
+    @endif
   
   
     <div class="topbar-divider d-none d-sm-block"></div>

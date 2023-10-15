@@ -12,9 +12,14 @@ return new class extends Migration
             $table->string('name');
             $table->string('price');
             $table->integer('stock');
-            $table->string('category_id');
+            $table->unsignedBigInteger('category_id')->nullable();; 
             $table->text('description');
             $table->timestamps();
+
+            $table->foreign('category_id')
+                ->references('id')
+                ->on('categories')
+                ->onDelete('set null');
         });
     }
     public function down(): void
