@@ -61,7 +61,7 @@ $items = [
               <!-- Card Body -->
               <div class="card-body">
                   <div class="chart-area">
-                      <canvas id="myAreaChart"></canvas>
+                      <canvas id="areaChart"></canvas>
                   </div>
               </div>
           </div>
@@ -106,6 +106,6 @@ $items = [
   <script src="/admin_assets/vendor/chart.js/Chart.min.js"></script>
 
 <!-- Page level custom scripts -->
-<script src="/admin_assets/js/demo/chart-area-demo.js"></script>
-<script src="/admin_assets/js/demo/chart-pie-demo.js"></script>
+<script src="/admin_assets/js/chart/chart-area.js"></script>
+<script src="/admin_assets/js/chart/chart-pie.js"></script>
 @endsection

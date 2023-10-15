@@ -8,9 +8,6 @@ use App\Models\Category;
  
 class ProductController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index(Request $request)
     {
         $queryProducts = Product::orderBy('created_at', 'DESC')->with('category');
@@ -22,18 +19,12 @@ class ProductController extends Controller
         return view('products.index', compact('products'));
     }
   
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
         $categories = Category::all(); 
         return view('products.create', compact('categories'));
     }
   
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
         $request->validate([
@@ -47,19 +38,14 @@ class ProductController extends Controller
         return redirect()->route('products')->with('success', 'Berhasil menambah produk');
     }
   
-    /**
-     * Display the specified resource.
-     */
+
     public function show(string $id)
     {
         $product = Product::findOrFail($id);
         $category = Category::find($product->category_id);
         return view('products.show', compact('product', 'category'));
     }
-  
-    /**
-     * Show the form for editing the specified resource.
-     */
+
     public function edit(string $id)
     {
         $product = Product::findOrFail($id);
@@ -67,9 +53,6 @@ class ProductController extends Controller
         return view('products.edit', compact('product', 'categories'));
     }
   
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(Request $request, string $id)
     {
         $request->validate([
@@ -85,9 +68,7 @@ class ProductController extends Controller
         return redirect()->route('products')->with('success', 'Berhasil mengupdate produk');
     }
   
-    /**
-     * Remove the specified resource from storage.
-     */
+ 
     public function destroy(string $id)
     {
         $product = Product::findOrFail($id);

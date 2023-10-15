@@ -38,7 +38,7 @@ async function fetchData(){
     if(res.ok){
       data.newestProducts.map(p=>productName.push(p.name))
       data.newestProducts.map(p=>productStock.push(p.stock))
-      var ctx = document.getElementById("myAreaChart");
+      var ctx = document.getElementById("areaChart");
       var myLineChart = new Chart(ctx, {
         type: 'line',
         data: {
