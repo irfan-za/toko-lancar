@@ -1,66 +1,46 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Admin Dashboard - Toko Lancar
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Admin Dashboard - Toko Lancar adalah proyek web yang dibuat menggunakan Laravel untuk mengelola produk, kategori, dan profil pengguna. Proyek ini menyediakan berbagai fitur seperti melihat grafik produk terbaru, melihat kategori dengan stok terbanyak, mengelola produk, mengelola kategori, dan melihat serta mengedit profil pengguna.
 
-## About Laravel
+## Fitur Utama
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- **Dashboard**: Halaman utama yang memungkinkan Anda memantau grafik produk terbaru dan kategori dengan stok terbanyak.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- **Tabel Produk**: Halaman ini memungkinkan Anda untuk menambah, mengedit, menghapus, dan melihat detail produk. Anda dapat mengelola daftar produk dengan mudah.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- **Tabel Kategori**: Halaman ini memungkinkan Anda untuk menambah, mengedit, menghapus, dan melihat detail kategori. Anda dapat mengelola daftar kategori dengan efisien.
 
-## Learning Laravel
+- **Profil Pengguna**: Halaman ini berisi data profil pengguna saat ini. Anda dapat melihat dan mengedit informasi profil Anda.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- **Login**: Halaman login yang memungkinkan pengguna masuk ke akun mereka.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Cara Menggunakan Proyek Ini
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+1. **Prasyarat**:
+   - Pastikan Anda memiliki PHP dan Composer terinstal di komputer Anda.
+   - Pastikan juga Anda telah menginstal Laravel.
 
-## Laravel Sponsors
+2. **Clone Repository**:
+   - Clone repositori ini ke komputer Anda menggunakan perintah Git: `git clone https://github.com/irfan-za/toko-lancar.git`.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+3. **Instal Dependensi**:
+   - Masuk ke direktori proyek dan jalankan `composer install` untuk menginstal semua dependensi yang diperlukan.
 
-### Premium Partners
+4. **Konfigurasi Lingkungan**:
+   - Salin file `.env.example` menjadi `.env` dan sesuaikan pengaturan database dan lingkungan lainnya sesuai dengan kebutuhan Anda.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+5. **Migrasi Database**:
+   - Jalankan perintah `php artisan migrate` untuk membuat tabel-tabel database yang diperlukan.
+6. **Seed Database (Opsional)**:
+  - Jika Anda ingin mengisi database dengan data dummy, jalankan perintah php artisan db:seed.
+7. **Mulai Server**:
+   - Jalankan server Laravel menggunakan perintah `php artisan serve`. Aplikasi Anda akan berjalan di alamat `http://localhost:8000`.
 
-## Contributing
+8. **Akses Aplikasi**:
+   - Buka browser dan akses aplikasi di alamat `http://localhost:8000`. Anda akan diarahkan ke halaman login.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+9. **Masuk**:
+   - Gunakan akun yang sudah Anda miliki atau buat akun baru untuk masuk.
 
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+10. **Mulai Menggunakan**:
+   - Setelah masuk, Anda akan dapat mengakses berbagai fitur aplikasi, termasuk dashboard, tabel produk, tabel kategori, dan profil pengguna.
