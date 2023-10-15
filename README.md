@@ -32,7 +32,8 @@ Admin Dashboard - Toko Lancar adalah proyek web yang dibuat menggunakan Laravel 
 5. **Migrasi Database**:
    - Jalankan perintah `php artisan migrate` untuk membuat tabel-tabel database yang diperlukan.
 6. **Seed Database (Opsional)**:
-  - Jika Anda ingin mengisi database dengan data dummy, jalankan perintah php artisan db:seed.
+  - Jika Anda ingin mengisi database dengan data dummy, jalankan perintah `php artisan db:seed --class=ProductsTableSeeder` kemudian jalankan perintah `php artisan db:seed --class=CategoriesTableSeeder`.
+
 7. **Mulai Server**:
    - Jalankan server Laravel menggunakan perintah `php artisan serve`. Aplikasi Anda akan berjalan di alamat `http://localhost:8000`.
 
