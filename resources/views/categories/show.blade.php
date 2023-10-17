@@ -19,11 +19,11 @@
     <div class="row">
         <div class="col mb-3">
             <label class="form-label">Created At</label>
-            <input type="text" name="created_at" class="form-control" placeholder="Created At" value="{{ $category->created_at }}" readonly>
+            <input type="text" name="created_at" class="form-control" value="{{ $category->created_at }}" readonly>
         </div>
         <div class="col mb-3">
             <label class="form-label">Updated At</label>
-            <input type="text" name="updated_at" class="form-control" placeholder="Updated At" value="{{ $category->updated_at }}" readonly>
+            <input type="text" name="updated_at" class="form-control" value="{{ $category->updated_at }}" readonly>
         </div>
     </div>
 @endsection
