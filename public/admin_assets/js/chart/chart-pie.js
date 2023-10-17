@@ -9,7 +9,7 @@ let categoryStock=[];
 // Fetch Data
 async function fetchData(){
   try {
-    const res= await fetch(`http://127.0.0.1:8000/dashboard/api`)
+    const res= await fetch(`http://localhost:8000/dashboard/api`)
     const data= await res.json();
     if(res.ok){
       data.categories.map(p=>categoryName.push(p.name))
