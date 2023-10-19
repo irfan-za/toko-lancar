@@ -1,5 +1,5 @@
 # Admin Dashboard - Toko Lancar
-
+![Toko Lancar Website](https://ajicfyapwuyotrfthhvu.supabase.co/storage/v1/object/public/project/1697722652820_project.png)
 Admin Dashboard - Toko Lancar adalah proyek web yang dibuat menggunakan Laravel untuk mengelola produk, kategori, dan profil pengguna. Proyek ini menyediakan berbagai fitur seperti melihat grafik produk terbaru, melihat kategori dengan stok terbanyak, mengelola produk, mengelola kategori, dan melihat serta mengedit profil pengguna.
 
 ## Fitur Utama
