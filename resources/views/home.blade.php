@@ -41,13 +41,31 @@
             background-color: #fff;
             color: #11A27B;
         }
+        img{
+            width: 200px;
+            height: 200px;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Toko Lancar</h1>
-        <p>Manajemen Barang Terbaik</p>
-        <a href="/login">Login</a>
+    <div class="py-14 ">
+        <div class="container">
+            <div class="row">
+                <div class="offset-lg-2 col-lg-8 col-md-12 col-12 text-center">
+                    <img src="/images/bg.svg">
+                <!-- heading  -->
+                <h1 class="display-3 mt-4 mb-3  fw-bold">Toko Lancar</h1>
+                <!-- para  -->
+                <p class="lead  px-lg-8 mb-6">Platform manajemen stok barang.</p>
+                <a href="/dashboard" class="btn btn-primary">Masuk ke Dashboard</a>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
+
+
+
+
+
