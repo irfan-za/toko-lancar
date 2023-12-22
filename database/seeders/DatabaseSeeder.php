@@ -9,6 +9,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+        $this->call([
+            \Database\Seeders\CategoriesTableSeeder::class,
+            \Database\Seeders\ProductsTableSeeder::class,
+        ]);
     }
 }
+
+// jalankan di terminal => php artisan db:seed 
