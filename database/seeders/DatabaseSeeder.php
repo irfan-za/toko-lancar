@@ -15,5 +15,4 @@ class DatabaseSeeder extends Seeder
         ]);
     }
 }
-
 // jalankan di terminal => php artisan db:seed 
